@@ -1,4 +1,4 @@
-# ALPR in Unscontrained Scenarios
+# ALPR in Unscontrained Scenarios - TensorRT
 
 ## Intro
 The source code trains the license plate recognition and OCR model, and can output the test results of a single picture. However, the training of license plate recognition is implemented by Keras. Not only does the model take up too much GPU resources, but the inference speed ranks last in various frameworks. Here, TensorRT is used to deploy license plate recognition inference. The TensorRT tool launched by Nvidia to deploy models trained on mainstream frameworks can greatly increase the speed of model inference. It is often at least 1 times faster than the original framework, and it also consumes less memory . And because of the video stream access, for the output results, the use of time redundancy is for the same vehicle combined with multiple frames to fuse the results to improve the output accuracy.
